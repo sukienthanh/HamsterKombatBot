@@ -1,5 +1,6 @@
 import asyncio
 import heapq
+import json
 from random import randint
 from time import time
 from datetime import datetime, timedelta
@@ -11,6 +12,7 @@ from pyrogram import Client
 from bot.api.combo import claim_daily_combo, get_combo_cards
 from bot.api.telegram import get_me_telegram
 from bot.config import settings
+from bot.data import Data
 from bot.utils.logger import logger
 from bot.exceptions import InvalidSession
 
@@ -27,16 +29,38 @@ from bot.api.clicker import (
 )
 from bot.api.exchange import select_exchange
 from bot.api.tasks import get_nuxt_builds, get_tasks, get_daily
-from bot.utils.scripts import decode_cipher, get_headers
+from bot.utils.scripts import decode_cipher, escape_html, get_headers
 from bot.utils.tg_web_data import get_tg_web_data
 from bot.utils.proxy import check_proxy
 
 
 class Tapper:
-    def __init__(self, tg_client: Client):
+    def __init__(self, tg_client: Data):
         self.session_name = tg_client.name
         self.tg_client = tg_client
+        
+    async def login(self, http_client: aiohttp.ClientSession, json_file_path: str) -> str:
+        response_text = ''
+        try:
+             # Read JSON data from file
+            with open("json/"+json_file_path+".json", 'r', encoding="utf8") as file:
+                json_data = json.load(file)
 
+            response = await http_client.post(url='https://api.hamsterkombat.io/auth/auth-by-telegram-webapp',
+                                             #json={"initDataRaw": json_data, "fingerprint": FINGERPRINT})
+                                             json= json_data)
+            
+            response_text = await response.text()
+            response.raise_for_status()
+
+            response_json = await response.json()
+            access_token = response_json['authToken']
+
+            return access_token
+        except Exception as error:
+            logger.error(f"{self.session_name} | Unknown error while getting Access Token: {error} | "
+                         f"Response text: {escape_html(response_text)[:128]}...")
+            await asyncio.sleep(delay=3)
     async def run(self, proxy: str | None) -> None:
         access_token_created_time = 0
         turbo_time = 0
@@ -56,11 +80,6 @@ class Tapper:
                 session_name=self.session_name,
             )
 
-        tg_web_data = await get_tg_web_data(
-            tg_client=self.tg_client,
-            proxy=proxy,
-            session_name=self.session_name,
-        )
 
         while True:
             try:
@@ -79,11 +98,7 @@ class Tapper:
                 if time() - access_token_created_time >= 3600:
                     await get_nuxt_builds(http_client=http_client)
 
-                    access_token = await login(
-                        http_client=http_client,
-                        tg_web_data=tg_web_data,
-                        session_name=self.session_name,
-                    )
+                    access_token = await self.login(http_client=http_client, json_file_path=self.tg_client.json_name)
 
                     if not access_token:
                         continue
@@ -443,7 +458,7 @@ class Tapper:
                 await asyncio.sleep(delay=sleep_between_clicks)
 
 
-async def run_tapper(tg_client: Client, proxy: str | None):
+async def run_tapper(tg_client: Data, proxy: str | None):
     try:
         await Tapper(tg_client=tg_client).run(proxy=proxy)
     except InvalidSession:

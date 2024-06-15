@@ -1,0 +1,288 @@
+{
+  "initDataRaw": "query_id=AAFPDiIOAwAAAE8OIg59FDqj&user=%7B%22id%22%3A6679563855%2C%22first_name%22%3A%22hoang%22%2C%22last_name%22%3A%2215%22%2C%22username%22%3A%22sucuto%22%2C%22language_code%22%3A%22vi%22%2C%22allows_write_to_pm%22%3Atrue%7D&auth_date=1717721773&hash=47624c4c5cd718510f72f33753875cb28d4c2d97523e904d468fba03db30e19b",
+  "fingerprint": {
+    "version": "4.2.1",
+    "visitorId": "086e5c4743198d14d96287ddb419e9b7",
+    "components": {
+      "fonts": {
+        "value": [
+          "Agency FB",
+          "Calibri",
+          "Century",
+          "Century Gothic",
+          "Franklin Gothic",
+          "Haettenschweiler",
+          "Leelawadee",
+          "Lucida Bright",
+          "Lucida Sans",
+          "MS Outlook",
+          "MS Reference Specialty",
+          "MS UI Gothic",
+          "MT Extra",
+          "Marlett",
+          "Microsoft Uighur",
+          "Monotype Corsiva",
+          "Pristina",
+          "Segoe UI Light"
+        ],
+        "duration": 146
+      },
+      "domBlockers": {
+        "duration": 0
+      },
+      "fontPreferences": {
+        "value": {
+          "default": 149.3125,
+          "apple": 149.3125,
+          "serif": 149.3125,
+          "sans": 144.015625,
+          "mono": 121.515625,
+          "min": 9.34375,
+          "system": 147.859375
+        },
+        "duration": 34
+      },
+      "audio": {
+        "value": 0.0000832115,
+        "duration": 42
+      },
+      "screenFrame": {
+        "value": [0, 0, 50, 0],
+        "duration": 0
+      },
+      "canvas": null,
+      "osCpu": {
+        "duration": 0
+      },
+      "languages": {
+        "value": [["vi"]],
+        "duration": 0
+      },
+      "colorDepth": {
+        "value": 24,
+        "duration": 0
+      },
+      "deviceMemory": {
+        "value": 8,
+        "duration": 0
+      },
+      "screenResolution": {
+        "value": [864, 1536],
+        "duration": 1
+      },
+      "hardwareConcurrency": {
+        "value": 12,
+        "duration": 0
+      },
+      "timezone": {
+        "value": "Asia/Bangkok",
+        "duration": 10
+      },
+      "sessionStorage": {
+        "value": true,
+        "duration": 0
+      },
+      "localStorage": {
+        "value": true,
+        "duration": 0
+      },
+      "indexedDB": {
+        "value": true,
+        "duration": 0
+      },
+      "openDatabase": {
+        "value": false,
+        "duration": 0
+      },
+      "cpuClass": {
+        "duration": 0
+      },
+      "platform": {
+        "value": "Win32",
+        "duration": 0
+      },
+      "plugins": {
+        "value": [
+          {
+            "name": "PDF Viewer",
+            "description": "Portable Document Format",
+            "mimeTypes": [
+              {
+                "type": "application/pdf",
+                "suffixes": "pdf"
+              },
+              {
+                "type": "text/pdf",
+                "suffixes": "pdf"
+              }
+            ]
+          },
+          {
+            "name": "Chrome PDF Viewer",
+            "description": "Portable Document Format",
+            "mimeTypes": [
+              {
+                "type": "application/pdf",
+                "suffixes": "pdf"
+              },
+              {
+                "type": "text/pdf",
+                "suffixes": "pdf"
+              }
+            ]
+          },
+          {
+            "name": "Chromium PDF Viewer",
+            "description": "Portable Document Format",
+            "mimeTypes": [
+              {
+                "type": "application/pdf",
+                "suffixes": "pdf"
+              },
+              {
+                "type": "text/pdf",
+                "suffixes": "pdf"
+              }
+            ]
+          },
+          {
+            "name": "Microsoft Edge PDF Viewer",
+            "description": "Portable Document Format",
+            "mimeTypes": [
+              {
+                "type": "application/pdf",
+                "suffixes": "pdf"
+              },
+              {
+                "type": "text/pdf",
+                "suffixes": "pdf"
+              }
+            ]
+          },
+          {
+            "name": "WebKit built-in PDF",
+            "description": "Portable Document Format",
+            "mimeTypes": [
+              {
+                "type": "application/pdf",
+                "suffixes": "pdf"
+              },
+              {
+                "type": "text/pdf",
+                "suffixes": "pdf"
+              }
+            ]
+          }
+        ],
+        "duration": 1
+      },
+      "touchSupport": {
+        "value": {
+          "maxTouchPoints": 0,
+          "touchEvent": false,
+          "touchStart": false
+        },
+        "duration": 0
+      },
+      "vendor": {
+        "value": "Google Inc.",
+        "duration": 0
+      },
+      "vendorFlavors": {
+        "value": ["chrome"],
+        "duration": 0
+      },
+      "cookiesEnabled": {
+        "value": false,
+        "duration": 0
+      },
+      "colorGamut": {
+        "value": "srgb",
+        "duration": 0
+      },
+      "invertedColors": {
+        "duration": 0
+      },
+      "forcedColors": {
+        "value": false,
+        "duration": 0
+      },
+      "monochrome": {
+        "value": 0,
+        "duration": 0
+      },
+      "contrast": {
+        "value": 0,
+        "duration": 0
+      },
+      "reducedMotion": {
+        "value": false,
+        "duration": 0
+      },
+      "reducedTransparency": {
+        "value": false,
+        "duration": 0
+      },
+      "hdr": {
+        "value": false,
+        "duration": 0
+      },
+      "math": {
+        "value": {
+          "acos": 1.4473588658278522,
+          "acosh": 709.889355822726,
+          "acoshPf": 355.291251501643,
+          "asin": 0.12343746096704435,
+          "asinh": 0.881373587019543,
+          "asinhPf": 0.8813735870195429,
+          "atanh": 0.5493061443340548,
+          "atanhPf": 0.5493061443340548,
+          "atan": 0.4636476090008061,
+          "sin": 0.8178819121159085,
+          "sinh": 1.1752011936438014,
+          "sinhPf": 2.534342107873324,
+          "cos": -0.8390715290095377,
+          "cosh": 1.5430806348152437,
+          "coshPf": 1.5430806348152437,
+          "tan": -1.4214488238747245,
+          "tanh": 0.7615941559557649,
+          "tanhPf": 0.7615941559557649,
+          "exp": 2.718281828459045,
+          "expm1": 1.718281828459045,
+          "expm1Pf": 1.718281828459045,
+          "log1p": 2.3978952727983707,
+          "log1pPf": 2.3978952727983707,
+          "powPI": 1.9275814160560204e-50
+        },
+        "duration": 0
+      },
+      "pdfViewerEnabled": {
+        "value": true,
+        "duration": 0
+      },
+      "architecture": {
+        "value": 255,
+        "duration": 0
+      },
+      "applePay": {
+        "value": -1,
+        "duration": 0
+      },
+      "privateClickMeasurement": {
+        "duration": 0
+      },
+      "webGlBasics": {
+        "value": {
+          "version": "WebGL 1.0 (OpenGL ES 2.0 Chromium)",
+          "vendor": "WebKit",
+          "vendorUnmasked": "Google Inc. (Intel)",
+          "renderer": "WebKit WebGL",
+          "rendererUnmasked": "ANGLE (Intel, Intel(R) UHD Graphics (0x00009BC4) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "shadingLanguageVersion": "WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)"
+        },
+        "duration": 13
+      },
+      "webGlExtensions": null
+    }
+  }
+}
